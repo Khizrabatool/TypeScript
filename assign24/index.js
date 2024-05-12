@@ -39,8 +39,8 @@ console.log(ten == 10 && twenty == 20);
 console.log('\n Is ten equal to ten or twenty not equal to twenty?');
 console.log(ten == 10 || twenty != 20);
 //Test whether an item is in a array
-console.log('\nIs apple is in the fruit list?');
-console.log(fruits.includes('apple'));
-//• Test whether an item is not in a array
-console.log('\nIs apple is not included in the fruit list?');
-console.log(!fruits.includes('apple'));
+// console.log('\nIs apple in the fruit list?')   
+// console.log(fruits.includes('apple')); //error during execution that includes liabrary doesnot exist
+// //• Test whether an item is not in a array
+// console.log('\nIs apple not included in the fruit list?')
+// console.log(!fruits.includes('apple')); //error during execution that includes liabrary doesnot exist

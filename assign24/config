@@ -1,0 +1,13 @@
+#Zeeshan-account
+     Host github.com-SZHaider2022
+          HostName github.com
+          User git
+          IdentityFile ~/.ssh/github-SZHaider2022
+	  port 443
+
+#Khizra account
+     Host github.com-Khizrabatool
+          HostName github.com
+          User git
+          IdentityFile ~/.ssh/github-Khizrabatool
+	  port 443
