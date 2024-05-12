@@ -51,7 +51,9 @@
 //   console.log(`Hello ${name} your age is ${age}`);
 // }
 // usrAge (20)
-// arrow function
+/* arrow function
+==================
+*/
 // let greet = (name: string) => {
 //     console.log(`hello ${name}`);
 // }
@@ -59,8 +61,25 @@
 // let greet = (name: string) => `hello ${name}`;
 // let result = greet("Okasha")
 // console.log(result);
-var num = 10;
-var evenNum = function (num) { return num % 2 === 0 ? "Even" : "Odd"; };
-console.log(evenNum(12));
+// let num = 10
+// let evenNum = (num: number) =>  num % 2 === 0 ? "Even":"Odd"
+// console.log(evenNum(12));
+/*Rest Parameter
+================= */
+function singAllSong(singer) {
+    var song = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        song[_i - 1] = arguments[_i];
+    }
+    for (var _a = 0, song_1 = song; _a < song_1.length; _a++) {
+        var thissong = song_1[_a];
+        console.log("".concat(thissong, " was sung by ").concat(singer));
+    }
+}
+//singAllSong("ABC")
+//singAllSong("ABC","def")
+singAllSong("ABC", "DEF", "IJK");
+/*Return Type
+============= */
 // Homework
 // functions / arrow functions / global variable / local variable / hoisting

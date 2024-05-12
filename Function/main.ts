@@ -73,7 +73,9 @@
 
 // usrAge (20)
 
-// arrow function
+/* arrow function
+==================
+*/
 
 // let greet = (name: string) => {
 //     console.log(`hello ${name}`);
@@ -85,11 +87,26 @@
 // let result = greet("Okasha")
 // console.log(result);
 
-let num = 10
-let evenNum = (num: number) =>  num % 2 === 0 ? "Even":"Odd"
+// let num = 10
+// let evenNum = (num: number) =>  num % 2 === 0 ? "Even":"Odd"
 
-console.log(evenNum(12));
+// console.log(evenNum(12));
 
+/*Rest Parameter
+================= */
+function singAllSong(singer: string, ...song: string[]) {
+   for (const thissong of song) {
+        console.log(`${thissong} was sung by ${singer}`);
+    }
+    
+    
+}
+//singAllSong("ABC")
+//singAllSong("ABC","def")
+singAllSong("ABC","DEF","IJK")
+
+/*Return Type
+============= */
 // Homework
 
 // functions / arrow functions / global variable / local variable / hoisting
