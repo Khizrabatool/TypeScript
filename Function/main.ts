@@ -94,19 +94,39 @@
 
 /*Rest Parameter
 ================= */
-function singAllSong(singer: string, ...song: string[]) {
-   for (const thissong of song) {
-        console.log(`${thissong} was sung by ${singer}`);
-    }
+// function singAllSong(singer: string, ...song: string[]) {
+//    for (const thissong of song) {
+//         console.log(`${thissong} was sung by ${singer}`);
+//     }
     
     
-}
-//singAllSong("ABC")
-//singAllSong("ABC","def")
-singAllSong("ABC","DEF","IJK")
+// }
+// //singAllSong("ABC")
+// //singAllSong("ABC","def")
+// singAllSong("ABC","DEF","IJK")
 
 /*Return Type
 ============= */
+//Type: (songs: string[]) => number
+// function singSongs(song: string[]) {
+//     for (const songs of song) {
+//         console.log(`${songs}`);
+//     }
+//     return singSongs.length        
+// }
+//Type: (songs: string[], index: number) => string | undefined
+function getSongAt (songs: string[], index: number,) {
+    return index < songs.length
+    ? songs[index]
+    : undefined;
+}
+/*Return Type Annotations
+// */
+// function singSongRecursive(songs: string[], count=0): number {
+//     return songs.length ? singSongRecursive(songs.slice(1), count+1) : count;
+// }
+const singSongRecursive=(song: string[], count=0): number =>
+    song.length ? singSongRecursive(song.slice(1), count +1) : count;
 // Homework
 
 // functions / arrow functions / global variable / local variable / hoisting

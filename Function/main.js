@@ -66,20 +66,37 @@
 // console.log(evenNum(12));
 /*Rest Parameter
 ================= */
-function singAllSong(singer) {
-    var song = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        song[_i - 1] = arguments[_i];
-    }
-    for (var _a = 0, song_1 = song; _a < song_1.length; _a++) {
-        var thissong = song_1[_a];
-        console.log("".concat(thissong, " was sung by ").concat(singer));
-    }
-}
-//singAllSong("ABC")
-//singAllSong("ABC","def")
-singAllSong("ABC", "DEF", "IJK");
+// function singAllSong(singer: string, ...song: string[]) {
+//    for (const thissong of song) {
+//         console.log(`${thissong} was sung by ${singer}`);
+//     }
+// }
+// //singAllSong("ABC")
+// //singAllSong("ABC","def")
+// singAllSong("ABC","DEF","IJK")
 /*Return Type
 ============= */
+//Type: (songs: string[]) => number
+// function singSongs(song: string[]) {
+//     for (const songs of song) {
+//         console.log(`${songs}`);
+//     }
+//     return singSongs.length        
+// }
+//Type: (songs: string[], index: number) => string | undefined
+function getSongAt(songs, index) {
+    return index < songs.length
+        ? songs[index]
+        : undefined;
+}
+/*Return Type Annotations
+// */
+// function singSongRecursive(songs: string[], count=0): number {
+//     return songs.length ? singSongRecursive(songs.slice(1), count+1) : count;
+// }
+var singSongRecursive = function (song, count) {
+    if (count === void 0) { count = 0; }
+    return song.length ? singSongRecursive(song.slice(1), count + 1) : count;
+};
 // Homework
 // functions / arrow functions / global variable / local variable / hoisting
